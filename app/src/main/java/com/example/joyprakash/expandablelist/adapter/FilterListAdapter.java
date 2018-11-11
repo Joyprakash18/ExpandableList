@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -181,9 +182,10 @@ public class FilterListAdapter extends BaseExpandableListAdapter {
 
     private static class ChildHolder {
         private TextView subCategoryTitle;
-
+        private CheckBox checkBox;
         ChildHolder(View convertView) {
             subCategoryTitle = (TextView) convertView.findViewById(R.id.sub_category_title);
+            checkBox = convertView.findViewById(R.id.checkbox);
         }
     }
 }
